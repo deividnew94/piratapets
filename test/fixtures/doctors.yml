@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  IdDoctor: 1
+  Nombre: MyString
+  Apellido_Paterno: MyString
+  Apellido_Materno: MyString
+  Email: MyString
+  Telefono: MyString
+  ADMINISTRADOR_IdAdministrador: 1
+
+two:
+  IdDoctor: 1
+  Nombre: MyString
+  Apellido_Paterno: MyString
+  Apellido_Materno: MyString
+  Email: MyString
+  Telefono: MyString
+  ADMINISTRADOR_IdAdministrador: 1

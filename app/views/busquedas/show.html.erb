@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Idbusqueda:</strong>
+  <%= @busqueda.IdBusqueda %>
+</p>
+
+<p>
+  <strong>Dni:</strong>
+  <%= @busqueda.Dni %>
+</p>
+
+<p>
+  <strong>Codigo paciente:</strong>
+  <%= @busqueda.Codigo_Paciente %>
+</p>
+
+<p>
+  <strong>Pacientes idpacientes:</strong>
+  <%= @busqueda.PACIENTES_IdPacientes %>
+</p>
+
+<p>
+  <strong>Pacientes clientes idcliente:</strong>
+  <%= @busqueda.PACIENTES_CLIENTES_IdCliente %>
+</p>
+
+<p>
+  <strong>Pacientes clientes administrador idadministrador:</strong>
+  <%= @busqueda.PACIENTES_CLIENTES_ADMINISTRADOR_IdAdministrador %>
+</p>
+
+<p>
+  <strong>Clientes idcliente:</strong>
+  <%= @busqueda.CLIENTES_IdCliente %>
+</p>
+
+<p>
+  <strong>Clientes administrador idadministrador:</strong>
+  <%= @busqueda.CLIENTES_ADMINISTRADOR_IdAdministrador %>
+</p>
+
+<%= link_to 'Edit', edit_busqueda_path(@busqueda) %> |
+<%= link_to 'Back', busquedas_path %>

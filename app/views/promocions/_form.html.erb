@@ -1,0 +1,37 @@
+<%= form_for(promocion) do |f| %>
+  <% if promocion.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(promocion.errors.count, "error") %> prohibited this promocion from being saved:</h2>
+
+      <ul>
+      <% promocion.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :IdPromociones %>
+    <%= f.number_field :IdPromociones %>
+  </div>
+
+  <div class="field">
+    <%= f.label :TipoPromocion %>
+    <%= f.text_field :TipoPromocion %>
+  </div>
+
+  <div class="field">
+    <%= f.label :NombrePromocion %>
+    <%= f.text_field :NombrePromocion %>
+  </div>
+
+  <div class="field">
+    <%= f.label :DuracionPromocion %>
+    <%= f.text_field :DuracionPromocion %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

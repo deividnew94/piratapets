@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Comprobantes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Idcomprobante</th>
+      <th>Nombre duenio</th>
+      <th>Paciente</th>
+      <th>Ruc</th>
+      <th>Direccion</th>
+      <th>Fecha registro</th>
+      <th>Detalle producto</th>
+      <th>Precio unitario</th>
+      <th>Precio total</th>
+      <th>Cantidad</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @comprobantes.each do |comprobante| %>
+      <tr>
+        <td><%= comprobante.IdComprobante %></td>
+        <td><%= comprobante.Nombre_Duenio %></td>
+        <td><%= comprobante.Paciente %></td>
+        <td><%= comprobante.Ruc %></td>
+        <td><%= comprobante.Direccion %></td>
+        <td><%= comprobante.Fecha_Registro %></td>
+        <td><%= comprobante.Detalle_Producto %></td>
+        <td><%= comprobante.Precio_Unitario %></td>
+        <td><%= comprobante.Precio_Total %></td>
+        <td><%= comprobante.Cantidad %></td>
+        <td><%= link_to 'Show', comprobante %></td>
+        <td><%= link_to 'Edit', edit_comprobante_path(comprobante) %></td>
+        <td><%= link_to 'Destroy', comprobante, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Comprobante', new_comprobante_path %>

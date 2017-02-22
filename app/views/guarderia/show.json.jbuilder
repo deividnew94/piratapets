@@ -1,0 +1,1 @@
+json.partial! "guarderia/guarderium", guarderium: @guarderium

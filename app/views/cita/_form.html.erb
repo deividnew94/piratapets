@@ -1,0 +1,62 @@
+<%= form_for(citum) do |f| %>
+  <% if citum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(citum.errors.count, "error") %> prohibited this citum from being saved:</h2>
+
+      <ul>
+      <% citum.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :IdCita %>
+    <%= f.number_field :IdCita %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Paciente %>
+    <%= f.text_field :Paciente %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Duenio %>
+    <%= f.text_field :Duenio %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Telefono %>
+    <%= f.text_field :Telefono %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Direccion %>
+    <%= f.text_field :Direccion %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Fecha_Registro %>
+    <%= f.text_field :Fecha_Registro %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Vacunas %>
+    <%= f.text_field :Vacunas %>
+  </div>
+
+  <div class="field">
+    <%= f.label :CLIENTES_IdCliente %>
+    <%= f.number_field :CLIENTES_IdCliente %>
+  </div>
+
+  <div class="field">
+    <%= f.label :CLIENTES_ADMINISTRADOR_IdAdministrador %>
+    <%= f.number_field :CLIENTES_ADMINISTRADOR_IdAdministrador %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

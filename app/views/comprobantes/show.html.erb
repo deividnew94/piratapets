@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Idcomprobante:</strong>
+  <%= @comprobante.IdComprobante %>
+</p>
+
+<p>
+  <strong>Nombre duenio:</strong>
+  <%= @comprobante.Nombre_Duenio %>
+</p>
+
+<p>
+  <strong>Paciente:</strong>
+  <%= @comprobante.Paciente %>
+</p>
+
+<p>
+  <strong>Ruc:</strong>
+  <%= @comprobante.Ruc %>
+</p>
+
+<p>
+  <strong>Direccion:</strong>
+  <%= @comprobante.Direccion %>
+</p>
+
+<p>
+  <strong>Fecha registro:</strong>
+  <%= @comprobante.Fecha_Registro %>
+</p>
+
+<p>
+  <strong>Detalle producto:</strong>
+  <%= @comprobante.Detalle_Producto %>
+</p>
+
+<p>
+  <strong>Precio unitario:</strong>
+  <%= @comprobante.Precio_Unitario %>
+</p>
+
+<p>
+  <strong>Precio total:</strong>
+  <%= @comprobante.Precio_Total %>
+</p>
+
+<p>
+  <strong>Cantidad:</strong>
+  <%= @comprobante.Cantidad %>
+</p>
+
+<%= link_to 'Edit', edit_comprobante_path(@comprobante) %> |
+<%= link_to 'Back', comprobantes_path %>

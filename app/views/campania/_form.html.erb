@@ -1,0 +1,32 @@
+<%= form_for(campanium) do |f| %>
+  <% if campanium.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(campanium.errors.count, "error") %> prohibited this campanium from being saved:</h2>
+
+      <ul>
+      <% campanium.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :IdCampania %>
+    <%= f.number_field :IdCampania %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Nombre_Campania %>
+    <%= f.text_field :Nombre_Campania %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Tiempo_Campania %>
+    <%= f.datetime_select :Tiempo_Campania %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

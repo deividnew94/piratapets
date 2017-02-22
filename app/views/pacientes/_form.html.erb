@@ -1,0 +1,87 @@
+<%= form_for(paciente) do |f| %>
+  <% if paciente.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(paciente.errors.count, "error") %> prohibited this paciente from being saved:</h2>
+
+      <ul>
+      <% paciente.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :IdPacientes %>
+    <%= f.number_field :IdPacientes %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Nombre_Duenio %>
+    <%= f.text_field :Nombre_Duenio %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Especie %>
+    <%= f.text_field :Especie %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Raza %>
+    <%= f.text_field :Raza %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Genero %>
+    <%= f.text_field :Genero %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Tipo_Sangre %>
+    <%= f.text_field :Tipo_Sangre %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Tamanio %>
+    <%= f.text_field :Tamanio %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Actividad %>
+    <%= f.text_field :Actividad %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Peso %>
+    <%= f.text_field :Peso %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Fecha_Nacimiento %>
+    <%= f.date_select :Fecha_Nacimiento %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Codigo_Paciente %>
+    <%= f.text_field :Codigo_Paciente %>
+  </div>
+
+  <div class="field">
+    <%= f.label :CLIENTES_IdCliente %>
+    <%= f.number_field :CLIENTES_IdCliente %>
+  </div>
+
+  <div class="field">
+    <%= f.label :CLIENTES_ADMINISTRADOR_IdAdministrador %>
+    <%= f.number_field :CLIENTES_ADMINISTRADOR_IdAdministrador %>
+  </div>
+
+  <div class="field">
+    <%= f.label :HISTORIA_IdHistoria %>
+    <%= f.number_field :HISTORIA_IdHistoria %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

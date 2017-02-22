@@ -1,0 +1,2 @@
+json.extract! administrador, :id, :IdAdministrador, :Nombre, :Apellido_Paterno, :Apellido_Materno, :Dni, :Codigo_admin, :CATALOGO_IdCatalogo, :CAMPANAS_IdCampana, :created_at, :updated_at
+json.url administrador_url(administrador, format: :json)

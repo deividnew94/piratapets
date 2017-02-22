@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  IdCliente: 1
+  Nombre: MyString
+  Apellido_Paterno: MyString
+  Apellido_Materno: MyString
+  Correo_Electronico: MyString
+  Direccion: MyString
+  Telefono_Casa: MyString
+  Telefono_Celular: MyString
+  ADMINISTRADOR_IdAdministrador: 1
+  HISTORIA_IdHistoria: 1
+
+two:
+  IdCliente: 1
+  Nombre: MyString
+  Apellido_Paterno: MyString
+  Apellido_Materno: MyString
+  Correo_Electronico: MyString
+  Direccion: MyString
+  Telefono_Casa: MyString
+  Telefono_Celular: MyString
+  ADMINISTRADOR_IdAdministrador: 1
+  HISTORIA_IdHistoria: 1

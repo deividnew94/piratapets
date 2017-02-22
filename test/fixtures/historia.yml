@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  IdHistoria: 1
+  Nro_Atencion: MyString
+  Antecedentes_Patologicos: MyString
+  Diagnostico: MyString
+  Receta: MyString
+  Sintomas: MyString
+
+two:
+  IdHistoria: 1
+  Nro_Atencion: MyString
+  Antecedentes_Patologicos: MyString
+  Diagnostico: MyString
+  Receta: MyString
+  Sintomas: MyString

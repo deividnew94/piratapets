@@ -1,0 +1,74 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Idpacientes:</strong>
+  <%= @paciente.IdPacientes %>
+</p>
+
+<p>
+  <strong>Nombre duenio:</strong>
+  <%= @paciente.Nombre_Duenio %>
+</p>
+
+<p>
+  <strong>Especie:</strong>
+  <%= @paciente.Especie %>
+</p>
+
+<p>
+  <strong>Raza:</strong>
+  <%= @paciente.Raza %>
+</p>
+
+<p>
+  <strong>Genero:</strong>
+  <%= @paciente.Genero %>
+</p>
+
+<p>
+  <strong>Tipo sangre:</strong>
+  <%= @paciente.Tipo_Sangre %>
+</p>
+
+<p>
+  <strong>Tamanio:</strong>
+  <%= @paciente.Tamanio %>
+</p>
+
+<p>
+  <strong>Actividad:</strong>
+  <%= @paciente.Actividad %>
+</p>
+
+<p>
+  <strong>Peso:</strong>
+  <%= @paciente.Peso %>
+</p>
+
+<p>
+  <strong>Fecha nacimiento:</strong>
+  <%= @paciente.Fecha_Nacimiento %>
+</p>
+
+<p>
+  <strong>Codigo paciente:</strong>
+  <%= @paciente.Codigo_Paciente %>
+</p>
+
+<p>
+  <strong>Clientes idcliente:</strong>
+  <%= @paciente.CLIENTES_IdCliente %>
+</p>
+
+<p>
+  <strong>Clientes administrador idadministrador:</strong>
+  <%= @paciente.CLIENTES_ADMINISTRADOR_IdAdministrador %>
+</p>
+
+<p>
+  <strong>Historia idhistoria:</strong>
+  <%= @paciente.HISTORIA_IdHistoria %>
+</p>
+
+<%= link_to 'Edit', edit_paciente_path(@paciente) %> |
+<%= link_to 'Back', pacientes_path %>

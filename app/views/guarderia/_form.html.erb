@@ -1,0 +1,72 @@
+<%= form_for(guarderium) do |f| %>
+  <% if guarderium.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(guarderium.errors.count, "error") %> prohibited this guarderium from being saved:</h2>
+
+      <ul>
+      <% guarderium.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :IdGuarderia %>
+    <%= f.number_field :IdGuarderia %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Nombre_Cliente %>
+    <%= f.text_field :Nombre_Cliente %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Nombre_Paciente %>
+    <%= f.text_field :Nombre_Paciente %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Codigo_Paciente %>
+    <%= f.text_field :Codigo_Paciente %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Tiempo_Estadia %>
+    <%= f.datetime_select :Tiempo_Estadia %>
+  </div>
+
+  <div class="field">
+    <%= f.label :BUSQUEDA_IdBusqueda %>
+    <%= f.number_field :BUSQUEDA_IdBusqueda %>
+  </div>
+
+  <div class="field">
+    <%= f.label :BUSQUEDA_PACIENTES_IdPacientes %>
+    <%= f.number_field :BUSQUEDA_PACIENTES_IdPacientes %>
+  </div>
+
+  <div class="field">
+    <%= f.label :BUSQUEDA_PACIENTES_CLIENTES_IdCliente %>
+    <%= f.number_field :BUSQUEDA_PACIENTES_CLIENTES_IdCliente %>
+  </div>
+
+  <div class="field">
+    <%= f.label :BUSQUEDA_PACIENTES_CLIENTES_ADMINISTRADOR_IdAdministrador %>
+    <%= f.number_field :BUSQUEDA_PACIENTES_CLIENTES_ADMINISTRADOR_IdAdministrador %>
+  </div>
+
+  <div class="field">
+    <%= f.label :BUSQUEDA_CLIENTES_IdCliente %>
+    <%= f.number_field :BUSQUEDA_CLIENTES_IdCliente %>
+  </div>
+
+  <div class="field">
+    <%= f.label :BUSQUEDA_CLIENTES_ADMINISTRADOR_IdAdministrador %>
+    <%= f.number_field :BUSQUEDA_CLIENTES_ADMINISTRADOR_IdAdministrador %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

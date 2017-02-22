@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Idcita:</strong>
+  <%= @citum.IdCita %>
+</p>
+
+<p>
+  <strong>Paciente:</strong>
+  <%= @citum.Paciente %>
+</p>
+
+<p>
+  <strong>Duenio:</strong>
+  <%= @citum.Duenio %>
+</p>
+
+<p>
+  <strong>Telefono:</strong>
+  <%= @citum.Telefono %>
+</p>
+
+<p>
+  <strong>Direccion:</strong>
+  <%= @citum.Direccion %>
+</p>
+
+<p>
+  <strong>Fecha registro:</strong>
+  <%= @citum.Fecha_Registro %>
+</p>
+
+<p>
+  <strong>Vacunas:</strong>
+  <%= @citum.Vacunas %>
+</p>
+
+<p>
+  <strong>Clientes idcliente:</strong>
+  <%= @citum.CLIENTES_IdCliente %>
+</p>
+
+<p>
+  <strong>Clientes administrador idadministrador:</strong>
+  <%= @citum.CLIENTES_ADMINISTRADOR_IdAdministrador %>
+</p>
+
+<%= link_to 'Edit', edit_citum_path(@citum) %> |
+<%= link_to 'Back', cita_path %>

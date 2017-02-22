@@ -1,0 +1,57 @@
+<%= form_for(busqueda) do |f| %>
+  <% if busqueda.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(busqueda.errors.count, "error") %> prohibited this busqueda from being saved:</h2>
+
+      <ul>
+      <% busqueda.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :IdBusqueda %>
+    <%= f.number_field :IdBusqueda %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Dni %>
+    <%= f.text_field :Dni %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Codigo_Paciente %>
+    <%= f.text_field :Codigo_Paciente %>
+  </div>
+
+  <div class="field">
+    <%= f.label :PACIENTES_IdPacientes %>
+    <%= f.number_field :PACIENTES_IdPacientes %>
+  </div>
+
+  <div class="field">
+    <%= f.label :PACIENTES_CLIENTES_IdCliente %>
+    <%= f.number_field :PACIENTES_CLIENTES_IdCliente %>
+  </div>
+
+  <div class="field">
+    <%= f.label :PACIENTES_CLIENTES_ADMINISTRADOR_IdAdministrador %>
+    <%= f.number_field :PACIENTES_CLIENTES_ADMINISTRADOR_IdAdministrador %>
+  </div>
+
+  <div class="field">
+    <%= f.label :CLIENTES_IdCliente %>
+    <%= f.number_field :CLIENTES_IdCliente %>
+  </div>
+
+  <div class="field">
+    <%= f.label :CLIENTES_ADMINISTRADOR_IdAdministrador %>
+    <%= f.number_field :CLIENTES_ADMINISTRADOR_IdAdministrador %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

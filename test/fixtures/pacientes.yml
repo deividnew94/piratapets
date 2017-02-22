@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  IdPacientes: 1
+  Nombre_Duenio: MyString
+  Especie: MyString
+  Raza: MyString
+  Genero: MyString
+  Tipo_Sangre: MyString
+  Tamanio: MyString
+  Actividad: MyString
+  Peso: 9.99
+  Fecha_Nacimiento: 2017-02-20
+  Codigo_Paciente: MyString
+  CLIENTES_IdCliente: 1
+  CLIENTES_ADMINISTRADOR_IdAdministrador: 1
+  HISTORIA_IdHistoria: 1
+
+two:
+  IdPacientes: 1
+  Nombre_Duenio: MyString
+  Especie: MyString
+  Raza: MyString
+  Genero: MyString
+  Tipo_Sangre: MyString
+  Tamanio: MyString
+  Actividad: MyString
+  Peso: 9.99
+  Fecha_Nacimiento: 2017-02-20
+  Codigo_Paciente: MyString
+  CLIENTES_IdCliente: 1
+  CLIENTES_ADMINISTRADOR_IdAdministrador: 1
+  HISTORIA_IdHistoria: 1

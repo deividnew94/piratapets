@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Historia</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Idhistoria</th>
+      <th>Nro atencion</th>
+      <th>Antecedentes patologicos</th>
+      <th>Diagnostico</th>
+      <th>Receta</th>
+      <th>Sintomas</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @historia.each do |historium| %>
+      <tr>
+        <td><%= historium.IdHistoria %></td>
+        <td><%= historium.Nro_Atencion %></td>
+        <td><%= historium.Antecedentes_Patologicos %></td>
+        <td><%= historium.Diagnostico %></td>
+        <td><%= historium.Receta %></td>
+        <td><%= historium.Sintomas %></td>
+        <td><%= link_to 'Show', historium %></td>
+        <td><%= link_to 'Edit', edit_historium_path(historium) %></td>
+        <td><%= link_to 'Destroy', historium, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Historium', new_historium_path %>

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Idhistoria:</strong>
+  <%= @historium.IdHistoria %>
+</p>
+
+<p>
+  <strong>Nro atencion:</strong>
+  <%= @historium.Nro_Atencion %>
+</p>
+
+<p>
+  <strong>Antecedentes patologicos:</strong>
+  <%= @historium.Antecedentes_Patologicos %>
+</p>
+
+<p>
+  <strong>Diagnostico:</strong>
+  <%= @historium.Diagnostico %>
+</p>
+
+<p>
+  <strong>Receta:</strong>
+  <%= @historium.Receta %>
+</p>
+
+<p>
+  <strong>Sintomas:</strong>
+  <%= @historium.Sintomas %>
+</p>
+
+<%= link_to 'Edit', edit_historium_path(@historium) %> |
+<%= link_to 'Back', historia_path %>

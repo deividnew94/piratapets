@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Administradors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Idadministrador</th>
+      <th>Nombre</th>
+      <th>Apellido paterno</th>
+      <th>Apellido materno</th>
+      <th>Dni</th>
+      <th>Codigo admin</th>
+      <th>Catalogo idcatalogo</th>
+      <th>Campanas idcampana</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @administradors.each do |administrador| %>
+      <tr>
+        <td><%= administrador.IdAdministrador %></td>
+        <td><%= administrador.Nombre %></td>
+        <td><%= administrador.Apellido_Paterno %></td>
+        <td><%= administrador.Apellido_Materno %></td>
+        <td><%= administrador.Dni %></td>
+        <td><%= administrador.Codigo_admin %></td>
+        <td><%= administrador.CATALOGO_IdCatalogo %></td>
+        <td><%= administrador.CAMPANAS_IdCampana %></td>
+        <td><%= link_to 'Show', administrador %></td>
+        <td><%= link_to 'Edit', edit_administrador_path(administrador) %></td>
+        <td><%= link_to 'Destroy', administrador, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Administrador', new_administrador_path %>

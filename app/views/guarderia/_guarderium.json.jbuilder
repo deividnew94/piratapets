@@ -1,0 +1,2 @@
+json.extract! guarderium, :id, :IdGuarderia, :Nombre_Cliente, :Nombre_Paciente, :Codigo_Paciente, :Tiempo_Estadia, :BUSQUEDA_IdBusqueda, :BUSQUEDA_PACIENTES_IdPacientes, :BUSQUEDA_PACIENTES_CLIENTES_IdCliente, :BUSQUEDA_PACIENTES_CLIENTES_ADMINISTRADOR_IdAdministrador, :BUSQUEDA_CLIENTES_IdCliente, :BUSQUEDA_CLIENTES_ADMINISTRADOR_IdAdministrador, :created_at, :updated_at
+json.url guarderium_url(guarderium, format: :json)

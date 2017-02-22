@@ -1,0 +1,57 @@
+<%= form_for(administrador) do |f| %>
+  <% if administrador.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(administrador.errors.count, "error") %> prohibited this administrador from being saved:</h2>
+
+      <ul>
+      <% administrador.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :IdAdministrador %>
+    <%= f.number_field :IdAdministrador %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Nombre %>
+    <%= f.text_field :Nombre %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Apellido_Paterno %>
+    <%= f.text_field :Apellido_Paterno %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Apellido_Materno %>
+    <%= f.text_field :Apellido_Materno %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Dni %>
+    <%= f.text_field :Dni %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Codigo_admin %>
+    <%= f.text_field :Codigo_admin %>
+  </div>
+
+  <div class="field">
+    <%= f.label :CATALOGO_IdCatalogo %>
+    <%= f.number_field :CATALOGO_IdCatalogo %>
+  </div>
+
+  <div class="field">
+    <%= f.label :CAMPANAS_IdCampana %>
+    <%= f.number_field :CAMPANAS_IdCampana %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

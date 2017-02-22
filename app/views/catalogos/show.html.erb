@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Idcatalogo:</strong>
+  <%= @catalogo.IdCatalogo %>
+</p>
+
+<p>
+  <strong>Productos:</strong>
+  <%= @catalogo.Productos %>
+</p>
+
+<p>
+  <strong>Servicios:</strong>
+  <%= @catalogo.Servicios %>
+</p>
+
+<%= link_to 'Edit', edit_catalogo_path(@catalogo) %> |
+<%= link_to 'Back', catalogos_path %>

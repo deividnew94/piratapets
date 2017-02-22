@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  IdServicio: 1
+  Nombre_Servicio: MyString
+  Precio_Servicio: 9.99
+  CATALOGO_IdCatalogo: 1
+
+two:
+  IdServicio: 1
+  Nombre_Servicio: MyString
+  Precio_Servicio: 9.99
+  CATALOGO_IdCatalogo: 1

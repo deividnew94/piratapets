@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  IdGuarderia: 1
+  Nombre_Cliente: MyString
+  Nombre_Paciente: MyString
+  Codigo_Paciente: MyString
+  Tiempo_Estadia: 2017-02-20 23:27:51
+  BUSQUEDA_IdBusqueda: 1
+  BUSQUEDA_PACIENTES_IdPacientes: 1
+  BUSQUEDA_PACIENTES_CLIENTES_IdCliente: 1
+  BUSQUEDA_PACIENTES_CLIENTES_ADMINISTRADOR_IdAdministrador: 1
+  BUSQUEDA_CLIENTES_IdCliente: 1
+  BUSQUEDA_CLIENTES_ADMINISTRADOR_IdAdministrador: 1
+
+two:
+  IdGuarderia: 1
+  Nombre_Cliente: MyString
+  Nombre_Paciente: MyString
+  Codigo_Paciente: MyString
+  Tiempo_Estadia: 2017-02-20 23:27:51
+  BUSQUEDA_IdBusqueda: 1
+  BUSQUEDA_PACIENTES_IdPacientes: 1
+  BUSQUEDA_PACIENTES_CLIENTES_IdCliente: 1
+  BUSQUEDA_PACIENTES_CLIENTES_ADMINISTRADOR_IdAdministrador: 1
+  BUSQUEDA_CLIENTES_IdCliente: 1
+  BUSQUEDA_CLIENTES_ADMINISTRADOR_IdAdministrador: 1

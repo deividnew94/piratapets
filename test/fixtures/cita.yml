@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  IdCita: 1
+  Paciente: MyString
+  Duenio: MyString
+  Telefono: MyString
+  Direccion: MyString
+  Fecha_Registro: MyString
+  Vacunas: MyString
+  CLIENTES_IdCliente: 1
+  CLIENTES_ADMINISTRADOR_IdAdministrador: 1
+
+two:
+  IdCita: 1
+  Paciente: MyString
+  Duenio: MyString
+  Telefono: MyString
+  Direccion: MyString
+  Fecha_Registro: MyString
+  Vacunas: MyString
+  CLIENTES_IdCliente: 1
+  CLIENTES_ADMINISTRADOR_IdAdministrador: 1

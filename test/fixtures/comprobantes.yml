@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  IdComprobante: 1
+  Nombre_Duenio: MyString
+  Paciente: MyString
+  Ruc: MyString
+  Direccion: MyString
+  Fecha_Registro: 2017-02-20
+  Detalle_Producto: MyString
+  Precio_Unitario: 9.99
+  Precio_Total: 9.99
+  Cantidad: MyString
+
+two:
+  IdComprobante: 1
+  Nombre_Duenio: MyString
+  Paciente: MyString
+  Ruc: MyString
+  Direccion: MyString
+  Fecha_Registro: 2017-02-20
+  Detalle_Producto: MyString
+  Precio_Unitario: 9.99
+  Precio_Total: 9.99
+  Cantidad: MyString

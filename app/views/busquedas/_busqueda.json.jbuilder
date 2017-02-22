@@ -1,0 +1,2 @@
+json.extract! busqueda, :id, :IdBusqueda, :Dni, :Codigo_Paciente, :PACIENTES_IdPacientes, :PACIENTES_CLIENTES_IdCliente, :PACIENTES_CLIENTES_ADMINISTRADOR_IdAdministrador, :CLIENTES_IdCliente, :CLIENTES_ADMINISTRADOR_IdAdministrador, :created_at, :updated_at
+json.url busqueda_url(busqueda, format: :json)

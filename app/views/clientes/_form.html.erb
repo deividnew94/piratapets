@@ -1,0 +1,67 @@
+<%= form_for(cliente) do |f| %>
+  <% if cliente.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cliente.errors.count, "error") %> prohibited this cliente from being saved:</h2>
+
+      <ul>
+      <% cliente.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :IdCliente %>
+    <%= f.number_field :IdCliente %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Nombre %>
+    <%= f.text_field :Nombre %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Apellido_Paterno %>
+    <%= f.text_field :Apellido_Paterno %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Apellido_Materno %>
+    <%= f.text_field :Apellido_Materno %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Correo_Electronico %>
+    <%= f.text_field :Correo_Electronico %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Direccion %>
+    <%= f.text_field :Direccion %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Telefono_Casa %>
+    <%= f.text_field :Telefono_Casa %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Telefono_Celular %>
+    <%= f.text_field :Telefono_Celular %>
+  </div>
+
+  <div class="field">
+    <%= f.label :ADMINISTRADOR_IdAdministrador %>
+    <%= f.number_field :ADMINISTRADOR_IdAdministrador %>
+  </div>
+
+  <div class="field">
+    <%= f.label :HISTORIA_IdHistoria %>
+    <%= f.number_field :HISTORIA_IdHistoria %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

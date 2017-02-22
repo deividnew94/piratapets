@@ -1,0 +1,67 @@
+<%= form_for(comprobante) do |f| %>
+  <% if comprobante.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(comprobante.errors.count, "error") %> prohibited this comprobante from being saved:</h2>
+
+      <ul>
+      <% comprobante.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :IdComprobante %>
+    <%= f.number_field :IdComprobante %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Nombre_Duenio %>
+    <%= f.text_field :Nombre_Duenio %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Paciente %>
+    <%= f.text_field :Paciente %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Ruc %>
+    <%= f.text_field :Ruc %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Direccion %>
+    <%= f.text_field :Direccion %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Fecha_Registro %>
+    <%= f.date_select :Fecha_Registro %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Detalle_Producto %>
+    <%= f.text_field :Detalle_Producto %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Precio_Unitario %>
+    <%= f.text_field :Precio_Unitario %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Precio_Total %>
+    <%= f.text_field :Precio_Total %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Cantidad %>
+    <%= f.text_field :Cantidad %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

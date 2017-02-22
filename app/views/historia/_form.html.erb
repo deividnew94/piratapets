@@ -1,0 +1,47 @@
+<%= form_for(historium) do |f| %>
+  <% if historium.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(historium.errors.count, "error") %> prohibited this historium from being saved:</h2>
+
+      <ul>
+      <% historium.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :IdHistoria %>
+    <%= f.number_field :IdHistoria %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Nro_Atencion %>
+    <%= f.text_field :Nro_Atencion %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Antecedentes_Patologicos %>
+    <%= f.text_field :Antecedentes_Patologicos %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Diagnostico %>
+    <%= f.text_field :Diagnostico %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Receta %>
+    <%= f.text_field :Receta %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Sintomas %>
+    <%= f.text_field :Sintomas %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

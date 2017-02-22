@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Guarderia</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Idguarderia</th>
+      <th>Nombre cliente</th>
+      <th>Nombre paciente</th>
+      <th>Codigo paciente</th>
+      <th>Tiempo estadia</th>
+      <th>Busqueda idbusqueda</th>
+      <th>Busqueda pacientes idpacientes</th>
+      <th>Busqueda pacientes clientes idcliente</th>
+      <th>Busqueda pacientes clientes administrador idadministrador</th>
+      <th>Busqueda clientes idcliente</th>
+      <th>Busqueda clientes administrador idadministrador</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @guarderia.each do |guarderium| %>
+      <tr>
+        <td><%= guarderium.IdGuarderia %></td>
+        <td><%= guarderium.Nombre_Cliente %></td>
+        <td><%= guarderium.Nombre_Paciente %></td>
+        <td><%= guarderium.Codigo_Paciente %></td>
+        <td><%= guarderium.Tiempo_Estadia %></td>
+        <td><%= guarderium.BUSQUEDA_IdBusqueda %></td>
+        <td><%= guarderium.BUSQUEDA_PACIENTES_IdPacientes %></td>
+        <td><%= guarderium.BUSQUEDA_PACIENTES_CLIENTES_IdCliente %></td>
+        <td><%= guarderium.BUSQUEDA_PACIENTES_CLIENTES_ADMINISTRADOR_IdAdministrador %></td>
+        <td><%= guarderium.BUSQUEDA_CLIENTES_IdCliente %></td>
+        <td><%= guarderium.BUSQUEDA_CLIENTES_ADMINISTRADOR_IdAdministrador %></td>
+        <td><%= link_to 'Show', guarderium %></td>
+        <td><%= link_to 'Edit', edit_guarderium_path(guarderium) %></td>
+        <td><%= link_to 'Destroy', guarderium, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Guarderium', new_guarderium_path %>

@@ -1,0 +1,2 @@
+json.extract! paciente, :id, :IdPacientes, :Nombre_Duenio, :Especie, :Raza, :Genero, :Tipo_Sangre, :Tamanio, :Actividad, :Peso, :Fecha_Nacimiento, :Codigo_Paciente, :CLIENTES_IdCliente, :CLIENTES_ADMINISTRADOR_IdAdministrador, :HISTORIA_IdHistoria, :created_at, :updated_at
+json.url paciente_url(paciente, format: :json)

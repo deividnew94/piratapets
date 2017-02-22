@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  IdPromociones: 1
+  TipoPromocion: MyString
+  NombrePromocion: MyString
+  DuracionPromocion: MyString
+
+two:
+  IdPromociones: 1
+  TipoPromocion: MyString
+  NombrePromocion: MyString
+  DuracionPromocion: MyString

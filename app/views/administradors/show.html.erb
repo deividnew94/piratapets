@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Idadministrador:</strong>
+  <%= @administrador.IdAdministrador %>
+</p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @administrador.Nombre %>
+</p>
+
+<p>
+  <strong>Apellido paterno:</strong>
+  <%= @administrador.Apellido_Paterno %>
+</p>
+
+<p>
+  <strong>Apellido materno:</strong>
+  <%= @administrador.Apellido_Materno %>
+</p>
+
+<p>
+  <strong>Dni:</strong>
+  <%= @administrador.Dni %>
+</p>
+
+<p>
+  <strong>Codigo admin:</strong>
+  <%= @administrador.Codigo_admin %>
+</p>
+
+<p>
+  <strong>Catalogo idcatalogo:</strong>
+  <%= @administrador.CATALOGO_IdCatalogo %>
+</p>
+
+<p>
+  <strong>Campanas idcampana:</strong>
+  <%= @administrador.CAMPANAS_IdCampana %>
+</p>
+
+<%= link_to 'Edit', edit_administrador_path(@administrador) %> |
+<%= link_to 'Back', administradors_path %>

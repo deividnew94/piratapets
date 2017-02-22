@@ -1,14 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>App</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>PirataPets :: VETERINARIA</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'default', media: 'all', 'data-turbolinks-track': true %>
+    <%= javascript_include_tag 'default', 'data-turbolinks-track': true %>
+
+
+    <%= stylesheet_link_tag "font-awesome" %>
   </head>
 
-  <body>
-    <%= yield %>
-  </body>
+<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+<h1 class="text-center text-muted">Hello bootstrap</h1>
+<%= yield %>
+
+<!-- Single button -->
+<div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Action <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+    <li><a href="#">Something else here</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Separated link</a></li>
+  </ul>
+</div>
+</body>
+
 </html>

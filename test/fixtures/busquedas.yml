@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  IdBusqueda: 1
+  Dni: MyString
+  Codigo_Paciente: MyString
+  PACIENTES_IdPacientes: 1
+  PACIENTES_CLIENTES_IdCliente: 1
+  PACIENTES_CLIENTES_ADMINISTRADOR_IdAdministrador: 1
+  CLIENTES_IdCliente: 1
+  CLIENTES_ADMINISTRADOR_IdAdministrador: 1
+
+two:
+  IdBusqueda: 1
+  Dni: MyString
+  Codigo_Paciente: MyString
+  PACIENTES_IdPacientes: 1
+  PACIENTES_CLIENTES_IdCliente: 1
+  PACIENTES_CLIENTES_ADMINISTRADOR_IdAdministrador: 1
+  CLIENTES_IdCliente: 1
+  CLIENTES_ADMINISTRADOR_IdAdministrador: 1

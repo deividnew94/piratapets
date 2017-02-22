@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Campania</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Idcampania</th>
+      <th>Nombre campania</th>
+      <th>Tiempo campania</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @campania.each do |campanium| %>
+      <tr>
+        <td><%= campanium.IdCampania %></td>
+        <td><%= campanium.Nombre_Campania %></td>
+        <td><%= campanium.Tiempo_Campania %></td>
+        <td><%= link_to 'Show', campanium %></td>
+        <td><%= link_to 'Edit', edit_campanium_path(campanium) %></td>
+        <td><%= link_to 'Destroy', campanium, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Campanium', new_campanium_path %>
