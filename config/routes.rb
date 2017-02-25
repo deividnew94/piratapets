@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'web/index'
+
+  get 'web/administrador'
+
+  get 'web/usuario'
+
+  get 'web/doctor'
+
   resources :servicios
   resources :promocions
   resources :productos
