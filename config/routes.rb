@@ -1,4 +1,18 @@
 Rails.application.routes.draw do
+  get 'login/administrador1'
+
+  get 'login/administrador2'
+
+  get 'login/administrador3'
+
+  get 'web/index'
+
+  get 'web/administrador'
+
+  get 'web/usuario'
+
+  get 'web/doctor'
+
   resources :servicios
   resources :promocions
   resources :productos

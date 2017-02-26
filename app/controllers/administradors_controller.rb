@@ -16,6 +16,14 @@ class AdministradorsController < ApplicationController
   def new
     @administrador = Administrador.new
   end
+  
+  # GET /administradors/1/edit
+  def validar
+    
+    
+    
+      Administrador.find(asfdsfsdf)
+  end
 
   # GET /administradors/1/edit
   def edit

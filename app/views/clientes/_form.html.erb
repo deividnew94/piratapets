@@ -1,5 +1,53 @@
-<%= form_for(cliente) do |f| %>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>PirataPets :: VETERINARIA</title>
+	
+    <!-- css -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/nivo-lightbox.css" rel="stylesheet" />
+	<link href="/css/nivo-lightbox-theme/default/default.css" rel="stylesheet" type="text/css" />
+	<link href="/css/animations.css" rel="stylesheet" />
+    <link href="/css/style.css" rel="stylesheet">
+	<link href="/color/default.css" rel="stylesheet">
+    <!-- =======================================================
+        Theme Name: Bocor
+        Theme URL: https://bootstrapmade.com/bocor-bootstrap-template-nice-animation/
+        Author: BootstrapMade
+        Author URL: https://bootstrapmade.com
+    ======================================================= -->
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+	
+
+	
+
+
+
+		
+		
+		
+		
+		<div class="container">
+
+			<div class="row marginbot-80">
+				<div class="col-md-8 col-md-offset-2">
+    						
+    		
+		<%= form_for(cliente) do |f| %>
   <% if cliente.errors.any? %>
+  
+<div class="col-md-6">
+    							    <div class="form-group">
     <div id="error_explanation">
       <h2><%= pluralize(cliente.errors.count, "error") %> prohibited this cliente from being saved:</h2>
 
@@ -9,59 +57,93 @@
       <% end %>
       </ul>
     </div>
+    </div>   </div>
   <% end %>
-
+  
+<div class="col-md-6">
+    							    <div class="form-group">
   <div class="field">
     <%= f.label :IdCliente %>
     <%= f.number_field :IdCliente %>
-  </div>
-
+  </div>   </div>   </div>
+  
+  
+  
+<div class="col-md-6">
+    							    <div class="form-group">
   <div class="field">
     <%= f.label :Nombre %>
     <%= f.text_field :Nombre %>
-  </div>
+  </div></div></div>
+  
+  
+  <div class="col-md-6">
+    							    <div class="form-group">
 
   <div class="field">
     <%= f.label :Apellido_Paterno %>
     <%= f.text_field :Apellido_Paterno %>
-  </div>
-
+  </div> </div> </div>
+<div class="col-md-6">
+    							    <div class="form-group">
   <div class="field">
     <%= f.label :Apellido_Materno %>
     <%= f.text_field :Apellido_Materno %>
-  </div>
-
+  </div> </div> </div>
+<div class="col-md-6">
+    							    <div class="form-group">
   <div class="field">
     <%= f.label :Correo_Electronico %>
     <%= f.text_field :Correo_Electronico %>
-  </div>
-
+  </div> </div> </div>
+<div class="col-md-6">
+    							    <div class="form-group">
   <div class="field">
     <%= f.label :Direccion %>
     <%= f.text_field :Direccion %>
-  </div>
-
+  </div> </div> </div>
+<div class="col-md-6">
+    							    <div class="form-group">
   <div class="field">
     <%= f.label :Telefono_Casa %>
     <%= f.text_field :Telefono_Casa %>
-  </div>
-
+  </div> </div> </div>
+<div class="col-md-6">
+    							    <div class="form-group">
   <div class="field">
     <%= f.label :Telefono_Celular %>
     <%= f.text_field :Telefono_Celular %>
-  </div>
-
+  </div> </div> </div>
+<div class="col-md-6">
+    							    <div class="form-group">
   <div class="field">
     <%= f.label :ADMINISTRADOR_IdAdministrador %>
     <%= f.number_field :ADMINISTRADOR_IdAdministrador %>
-  </div>
-
+  </div> </div> </div>
+<div class="col-md-6">
+    							    <div class="form-group">
   <div class="field">
     <%= f.label :HISTORIA_IdHistoria %>
     <%= f.number_field :HISTORIA_IdHistoria %>
-  </div>
-
+  </div> </div> </div>
+<div class="col-md-6">
+    							    <div class="form-group">
   <div class="actions">
     <%= f.submit %>
-  </div>
+  </div> </div> </div>
 <% end %>
+    						
+    						
+    						
+    						
+
+				</div>
+			</div>		</div>
+	
+
+
+</body>
+
+</html>
+
+
