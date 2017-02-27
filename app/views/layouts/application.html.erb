@@ -25,33 +25,6 @@
 
     <%= stylesheet_link_tag "font-awesome" %>
 
-    <div class="Main_Header">
-      <%unless session[:user_id]%>
-          <ul class="nav">
-            <li><%= link_to :Login , :login, class: "nav_links"%></li>
-          </ul>
-      <%else%>
-          <ul class="nav">
-            <li><%= link_to :Home , :home, class: "nav_links" %> |</li>
-            <li><%= link_to :Profile , :profile, class: "nav_links" %> |</li>
-            <li><%= link_to :Setting , :setting, class: "nav_links" %> |</li>
-            <li><%= link_to :Logout , :logout, class: "nav_links" %></li>
-          </ul>
-      <%end%>
-    </div>
-    <% if flash[:color]== "valid" %>
-        <div class="valid_notice">
-          <p><%= flash[:notice]%></p>
-        </div>
-    <% elsif flash[:color]== "invalid"%>
-        <div class="invalid_notice">
-          <p><%=flash[:notice]%></p>
-        </div>
-    <%else%>
-        <div class="notice">
-          <p><%=flash[:notice]%></p>
-        </div>
-    <%end%>
   </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
@@ -77,9 +50,33 @@
                                                       <!-- Collect the nav links, forms, and other content for toggling -->
                                                       <div class="collapse navbar-collapse" id="menu">
                                                             <ul class="nav navbar-nav navbar-right">
-                            
+
                                                             <li><a href="#intranet">INTRANET</a></li>
+                                                                <%unless session[:user_id]%>
+                                                                      <li><%= link_to :Login , :login, class: "nav_links"%></li>
+                                                                <%else%>
+                                                                      <li><%= link_to :Logout , :logout, class: "nav_links" %></li>
+                                                                <%end%>
                                                             </ul>
+                                                        <br>
+                                                        <br>
+                                                        <ul class="nav navbar-nav navbar-right">
+
+                                                        <li>
+                                                          <% if flash[:color]== "valid" %>
+                                                              <div class="valid_notice">
+                                                                <p><%= flash[:notice]%></p>
+                                                              </div>
+                                                          <% elsif flash[:color]== "invalid"%>
+                                                              <div class="invalid_notice">
+                                                                <p><%=flash[:notice]%></p>
+                                                              </div>
+                                                          <%else%>
+                                                              <div class="notice">
+                                                                <p><%=flash[:notice]%></p>
+                                                              </div>
+                                                          <%end%></li>
+                                                        </ul>
                                                       </div>
                                                       <!-- /.Navbar-collapse -->
                              

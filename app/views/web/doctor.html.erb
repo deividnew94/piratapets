@@ -33,6 +33,7 @@ function MM_swapImage() { //v3.0
 					<div class="animatedParent">
 					<div class="section-heading text-center animated bounceInDown">
 					<h2 class="h-bold">ZONA DOCTOR VETERIANARIO</h2>
+            <h2 > Hola <%=@current_user.username%> </h2>
 					<div class="divider-header"></div>
 					</div>
 					</div>
@@ -45,7 +46,10 @@ function MM_swapImage() { //v3.0
 <div align="center"><table class="table table-responsive">
 
   <tr>
-    <th><div align="center"  ><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image7','','/img/nuevo_historia_2.jpg',1)"><img src="/img/nuevo_historia_1.jpg" width="250" height="125" id="Image7" /></a></div></th>
+    <th><div align="center"  >
+      <%= link_to :Historia , :historia, class: "nav_links"%>
+      <%= image_tag '/img/nuevo_historia_1.jpg', width: 136, height: 67, alt: 'a face that is unnervingly happy', onmouseover:"MM_swapImage('Image7','','/img/nuevo_historia_2.jpg',1)",onmouseout:"MM_swapImgRestore()"%>
+
   
   </tr>
 </table></div>

@@ -21,8 +21,7 @@ ActiveRecord::Schema.define(version: 20170227122526) do
     t.string  "Codigo_admin",        limit: 45, null: false
     t.integer "CATALOGO_IdCatalogo",            null: false
     t.integer "CAMPANAS_IdCampana",             null: false
-    t.string  "User",                limit: 45, null: false
-    t.string  "Password",            limit: 45, null: false
+    t.integer "IdUser"
     t.index ["CAMPANAS_IdCampana"], name: "fk_ADMINISTRADOR_CAMPAÑAS1_idx", using: :btree
     t.index ["CATALOGO_IdCatalogo"], name: "fk_ADMINISTRADOR_CATALOGO1_idx", using: :btree
   end
@@ -81,6 +80,7 @@ ActiveRecord::Schema.define(version: 20170227122526) do
     t.string  "Telefono_Celular",              limit: 45, null: false
     t.integer "ADMINISTRADOR_IdAdministrador",            null: false
     t.integer "HISTORIA_IdHistoria",                      null: false
+    t.integer "IdUser"
     t.index ["ADMINISTRADOR_IdAdministrador"], name: "fk_CLIENTES_ADMINISTRADOR1_idx", using: :btree
     t.index ["HISTORIA_IdHistoria"], name: "fk_CLIENTES_HISTORIA1_idx", using: :btree
   end
@@ -132,6 +132,7 @@ ActiveRecord::Schema.define(version: 20170227122526) do
     t.string  "Email",                         limit: 45, null: false
     t.string  "Telefono",                      limit: 45, null: false
     t.integer "ADMINISTRADOR_IdAdministrador",            null: false
+    t.integer "IdUser"
     t.index ["ADMINISTRADOR_IdAdministrador"], name: "fk_DOCTORES_ADMINISTRADOR_idx", using: :btree
   end
 
@@ -202,6 +203,11 @@ ActiveRecord::Schema.define(version: 20170227122526) do
     t.string "DuracionPromocion", limit: 45, null: false
   end
 
+  create_table "rols", primary_key: "IdRol", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "Tipo",        limit: 45, null: false
+    t.string "Descripcion", limit: 45, null: false
+  end
+
   create_table "servicios", primary_key: ["IdServicio", "CATALOGO_IdCatalogo"], force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "IdServicio",                                    null: false
     t.string  "Nombre_Servicio",     limit: 45,                null: false
@@ -219,11 +225,11 @@ ActiveRecord::Schema.define(version: 20170227122526) do
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "rol_id"
     t.string   "username",           limit: 45
     t.string   "email",              limit: 45
-    t.string   "encrypted_password", limit: 45
+    t.string   "encrypted_password"
     t.string   "salt",               limit: 45
-    t.datetime "timestamps"
     t.datetime "created_at",                    null: false
     t.datetime "updated_at",                    null: false
   end

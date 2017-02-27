@@ -19,14 +19,16 @@ Rails.application.routes.draw do
   get 'web/doctor'
 
   get ':controller(/:action(/:id))(.:format)'
-  root :to => 'sessions#login'
+  root :to => 'web#index'
   get 'signup', :to => 'users#new'
-  get 'login', :to => 'sessions#login'
-  get 'logout', :to => 'sessions#logout'
-  get 'home', :to => 'sessions#home'
-  get 'profile', :to => 'sessions#profile'
-  get 'setting', :to => 'sessions#setting'
-  post 'login_attempt', :to => 'sessions#login_attempt'
+  get 'login', :to => 'web#index'
+  get 'logout', :to => 'web#logout'
+  get 'home', :to => 'web#administrador'
+  get 'profile', :to => 'web#profile'
+  get 'setting', :to => 'web#setting'
+  post 'login_attempt', :to => 'web#login_attempt'
+
+  get "historia/:id/show", :controller => "historia", :action => "check_historias"
 
   resources :servicios
   resources :promocions

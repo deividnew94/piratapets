@@ -51,18 +51,16 @@
 				<div class="col-md-8 col-md-offset-2">
 				    <div id="sendmessage">Your message has been sent. Thank you!</div>
                     <div id="errormessage"></div>
-						<form id="contact-form" action="" method="post" role="form" class="contactForm">
+              <%= form_tag(:action => 'login_attempt', class: 'contactForm') do %>
     						<div class="row marginbot-20">
     							<div class="col-md-6 xs-marginbot-20">
     							    <div class="form-group">
-        								<input type="text" name="name" class="form-control" id="name" placeholder="Tu USUARIO" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                                        <div class="validation"></div>
-                                    </div>
+                        <%= text_field_tag(:username_or_email, "",placeholder:"Tu USUARIO o EMAIL",id:'name', class: 'form-control',"data-rule" => "minlen:4","data-msg" => "Please enter a valid email or user") %>
+                      </div>
     							</div>
     							<div class="col-md-6">
     							    <div class="form-group">
-        								<input type="password" class="form-control" name="email" id="email" placeholder="Tu PASSWOORD" data-rule="email" data-msg="Please enter a valid email" />
-                                        <div class="validation"></div>
+                        <%= password_field_tag :login_password, "", placeholder:"Tu PASSWOORD",id:'email', class: 'form-control',"data-rule" => "email","data-msg" => "Please enter a valid password" %>
     							    </div>
     							</div>
     						</div>
@@ -75,12 +73,11 @@
     								</div>
     								<div class="form-group">
     								  <div class="validation"></div>
-    								</div>						
-    								<button type="submit" class="btn btn-skin btn-lg btn-block" id="btnContactUs">
-								  INGRESAR</button>
+    								</div>
+                    <%= submit_tag("INGRESAR", class: 'btn btn-skin btn-lg btn-block') %>
     							</div>
     						</div>
-						</form>
+              <% end %>
 				</div>
 			</div>	
 
