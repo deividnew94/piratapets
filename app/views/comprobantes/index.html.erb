@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Comprobantes</h1>
-
-<table>
+</br></br>
+<div align="center"><h1>COMPROBANTES</h1></div>
+</br></br>
+<table class="table table-bordered">
   <thead>
     <tr>
       <th>Idcomprobante</th>
@@ -32,14 +32,14 @@
         <td><%= comprobante.Precio_Unitario %></td>
         <td><%= comprobante.Precio_Total %></td>
         <td><%= comprobante.Cantidad %></td>
-        <td><%= link_to 'Show', comprobante %></td>
-        <td><%= link_to 'Edit', edit_comprobante_path(comprobante) %></td>
-        <td><%= link_to 'Destroy', comprobante, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'VER', comprobante %></td>
+        <td><%= link_to 'EDITAR', edit_comprobante_path(comprobante) %></td>
+        <td><%= link_to 'BORRAR', comprobante, method: :delete, data: { confirm: 'ESTAS SEGURO' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
+</br></br>
 
-<%= link_to 'New Comprobante', new_comprobante_path %>
+<div align="center"><%= link_to 'NUEVO COMPROBANTE', new_comprobante_path %></div></br></br>

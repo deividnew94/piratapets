@@ -1,54 +1,80 @@
-<p id="notice"><%= notice %></p>
+		<div align="center">
+		<table align="center" class="table table-bordered">
+		  
+		  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Idcliente:</strong>
-  <%= @cliente.IdCliente %>
-</p>
+<tr>
+   <th><div align="right">
+  <strong>ID CLIENTE:</strong></div></th>
+  <th><%= @cliente.IdCliente %></th>
+</th>
+</tr>
 
-<p>
-  <strong>Nombre:</strong>
-  <%= @cliente.Nombre %>
-</p>
+<tr>
+   <th><div align="right">
+  <strong>NOMBRE:</strong></div></th>
+  <th><%= @cliente.Nombre %></th>
+</th>
+</tr>
 
-<p>
-  <strong>Apellido paterno:</strong>
-  <%= @cliente.Apellido_Paterno %>
-</p>
+<tr>
+   <th><div align="right">
+  <strong>APELLIDO PATERNO:</strong></div></th>
+ <th> <%= @cliente.Apellido_Paterno %></th>
+</th>
+</tr>
 
-<p>
-  <strong>Apellido materno:</strong>
-  <%= @cliente.Apellido_Materno %>
-</p>
+<tr>
+   <th><div align="right">
+  <strong>APELLIDO MATERNO:</strong></div></th>
+  <th><%= @cliente.Apellido_Materno %></th>
+</th>
+</tr>
 
-<p>
-  <strong>Correo electronico:</strong>
-  <%= @cliente.Correo_Electronico %>
-</p>
+<tr>
+   <th><div align="right">
+  <strong>CORREO ELECTRONICO:</strong></div></th>
+ <th> <%= @cliente.Correo_Electronico %></th>
+</th>
+</tr>
 
-<p>
-  <strong>Direccion:</strong>
-  <%= @cliente.Direccion %>
-</p>
+<tr>
+   <th><div align="right">
+  <strong>DIRECCIÓN:</strong></div></th>
+ <th> <%= @cliente.Direccion %></th>
+</th>
+</tr>
 
-<p>
-  <strong>Telefono casa:</strong>
-  <%= @cliente.Telefono_Casa %>
-</p>
+<tr>
+   <th><div align="right">
+  <strong>TELEFONO CASA:</strong></div></th>
+  <th><%= @cliente.Telefono_Casa %></th>
+</th>
+</tr>
 
-<p>
-  <strong>Telefono celular:</strong>
-  <%= @cliente.Telefono_Celular %>
-</p>
+<tr>
+   <th><div align="right">
+  <strong>TELEFONO CELULAR:</strong></div></th>
+ <th> <%= @cliente.Telefono_Celular %></th>
+</th>
+</tr>
 
-<p>
-  <strong>Administrador idadministrador:</strong>
-  <%= @cliente.ADMINISTRADOR_IdAdministrador %>
-</p>
+<tr>
+   <th><div align="right">
+  <strong>Administrador ID:</strong></div></th>
+ <th> <%= @cliente.ADMINISTRADOR_IdAdministrador %></th>
+</th>
+</tr>
 
-<p>
-  <strong>Historia idhistoria:</strong>
-  <%= @cliente.HISTORIA_IdHistoria %>
-</p>
+<tr>
+   <th><div align="right">
+  <strong>Historia ID:</strong></div></th>
+  <th><%= @cliente.HISTORIA_IdHistoria %></th>
+</th>
+</tr>
 
-<%= link_to 'Edit', edit_cliente_path(@cliente) %> |
-<%= link_to 'Back', clientes_path %>
+</table></br> </br>  </br>   </div>
+<div align="center">
+<%= link_to 'EDITAR', edit_cliente_path(@cliente) %> |
+<%= link_to 'ATRAS', clientes_path %>
+</div></br>  </br>  

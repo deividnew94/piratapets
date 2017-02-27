@@ -1,13 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Catalogos</h1>
+<div align="center"><h1>CATALOGOS</h1></div>
 
-<table>
+<table class="table table-bordered">
   <thead>
     <tr>
-      <th>Idcatalogo</th>
-      <th>Productos</th>
-      <th>Servicios</th>
+      <th>ID CATALOGO</th>
+      <th>PRODUCTOS</th>
+      <th>SERVICIOS</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,14 +18,15 @@
         <td><%= catalogo.IdCatalogo %></td>
         <td><%= catalogo.Productos %></td>
         <td><%= catalogo.Servicios %></td>
-        <td><%= link_to 'Show', catalogo %></td>
-        <td><%= link_to 'Edit', edit_catalogo_path(catalogo) %></td>
-        <td><%= link_to 'Destroy', catalogo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'VER', catalogo %></td>
+        <td><%= link_to 'EDITAR', edit_catalogo_path(catalogo) %></td>
+        <td><%= link_to 'BORRAR', catalogo, method: :delete, data: { confirm: 'ESTA SEGURO?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
+</br></br></br>
 
-<%= link_to 'New Catalogo', new_catalogo_path %>
+<div align="center"><%= link_to 'NUEVO CATAOLOGO', new_catalogo_path %></div>
+</br></br></br>
