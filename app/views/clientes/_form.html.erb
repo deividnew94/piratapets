@@ -32,18 +32,76 @@
 	
 	
     <!-- Navigation -->
-  
-		
-		
-		<div align="center">
-		<table class="table table-bordered">
+    <div id="navigation">
+        <nav class="navbar navbar-custom" role="navigation">
+                              <div class="container">
+                                    <div class="row">
+                                          <div class="col-md-2">
+                                                   <div class="site-logo">
+                                                            <a href="index.html" class="brand"><img src="/img/logo2.png" width="400" height="79"></a></div></div>
+                                          
 
+                                          <div class="col-md-10">
+                         
+                                                      <!-- Brand and toggle get grouped for better mobile display -->
+                                          <div class="navbar-header">
+                                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+                                                <i class="fa fa-bars"></i>
+                                                </button>
+                                          </div>
+                                                      <!-- Collect the nav links, forms, and other content for toggling -->
+                                                      <div class="collapse navbar-collapse" id="menu">
+                                                            <ul class="nav navbar-nav navbar-right">
+                                                              
+                                                              
+                                                            <li><a href="#intranet">INTRANET</a></li>
+                                                            </ul>
+                                                      </div>
+                                                      <!-- /.Navbar-collapse -->
+                             
+                                          </div>
+                                    </div>
+                              </div>
+                              <!-- /.container -->
+                        </nav>
+    </div> 
+    <!-- /Navigation -->  
+
+
+
+	<!-- Section: contact -->
+    <section id="contact" class="home-section nopadd-bot color-dark bg-gray text-center">
+		<div class="container marginbot-50">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+					<div class="animatedParent">
+					<div class="section-heading text-center">
+					<h2 class="h-bold animated bounceInDown">CLIENTE NUEVO</h2>
+					<div class="divider-header"></div>
+					</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		
+		
+		
+		
+		
+		
+		<div class="container">
+
+			<div class="row marginbot-80">
+				<div class="col-md-8 col-md-offset-2">
     						
     		
 		<%= form_for(cliente) do |f| %>
   <% if cliente.errors.any? %>
   
-
+<div class="col-md-6">
+    							    <div class="form-group">
+    <div id="error_explanation">
       <h2><%= pluralize(cliente.errors.count, "error") %> prohibited this cliente from being saved:</h2>
 
       <ul>
@@ -51,72 +109,138 @@
         <li><%= message %></li>
       <% end %>
       </ul>
-
-
+    </div>
+    </div>   </div>
   <% end %>
   
-<tr>
-   <th><div align="right"><%= f.label :IdCliente %></div> </th>
-    <th>  <%= f.number_field :IdCliente %></th>
-</tr>
+<div class="col-md-6">
+    							    <div class="form-group">
+  <div class="field">
+    <%= f.label :IdCliente %>
+    <%= f.number_field :IdCliente %>
+  </div>   </div>   </div>
   
   
   
-<tr>
-    <th><div align="right">  <%= f.label :Nombre %></div> </th>
-    <th>  <%= f.text_field :Nombre %></th>
-</tr>
+<div class="col-md-6">
+    							    <div class="form-group">
+  <div class="field">
+    <%= f.label :Nombre %>
+    <%= f.text_field :Nombre %>
+  </div></div></div>
   
   
-<tr>
-   <th>  <div align="right"> <%= f.label :Apellido_Paterno %></div> </th>
-    <th>  <%= f.text_field :Apellido_Paterno %></th>
-</tr>
-  
-<tr>
-   <th>   <div align="right"><%= f.label :Apellido_Materno %></div> </th>
-    <th>  <%= f.text_field :Apellido_Materno %></th>
-</tr>
-  
-<tr>
-    <th>  <div align="right"><%= f.label :Correo_Electronico %></div> </th>
-    <th>  <%= f.text_field :Correo_Electronico %></th>
-</tr>
-  
-<tr>
-   <th>  <div align="right"> <%= f.label :Direccion %></div> </th>
-    <th>  <%= f.text_field :Direccion %></th>
-</tr>
+  <div class="col-md-6">
+    							    <div class="form-group">
 
-<tr>
-    <th><div align="right">  <%= f.label :Telefono_Casa %></div> </th>
-    <th>  <%= f.text_field :Telefono_Casa %></th>
-</tr>
-  
-  <tr>
-     <th> <div align="right"><%= f.label :Telefono_Celular %></div> </th>
-    <th>  <%= f.text_field :Telefono_Celular %></th>
-</tr>
-  
-<tr>
-    <th><div align="right">  <%= f.label :ADMINISTRADOR_IdAdministrador %></div> </th>
-    <th>  <%= f.number_field :ADMINISTRADOR_IdAdministrador %></th>
-</tr>
-  
-<tr>
-    <th>  <div align="right"><%= f.label :HISTORIA_IdHistoria %></div> </th>
-    <th>  <%= f.number_field :HISTORIA_IdHistoria %></th>
-</tr>
+  <div class="field">
+    <%= f.label :Apellido_Paterno %>
+    <%= f.text_field :Apellido_Paterno %>
+  </div> </div> </div>
+<div class="col-md-6">
+    							    <div class="form-group">
+  <div class="field">
+    <%= f.label :Apellido_Materno %>
+    <%= f.text_field :Apellido_Materno %>
+  </div> </div> </div>
+<div class="col-md-6">
+    							    <div class="form-group">
+  <div class="field">
+    <%= f.label :Correo_Electronico %>
+    <%= f.text_field :Correo_Electronico %>
+  </div> </div> </div>
+<div class="col-md-6">
+    							    <div class="form-group">
+  <div class="field">
+    <%= f.label :Direccion %>
+    <%= f.text_field :Direccion %>
+  </div> </div> </div>
+<div class="col-md-6">
+    							    <div class="form-group">
+  <div class="field">
+    <%= f.label :Telefono_Casa %>
+    <%= f.text_field :Telefono_Casa %>
+  </div> </div> </div>
+<div class="col-md-6">
+    							    <div class="form-group">
+  <div class="field">
+    <%= f.label :Telefono_Celular %>
+    <%= f.text_field :Telefono_Celular %>
+  </div> </div> </div>
+<div class="col-md-6">
+    							    <div class="form-group">
+  <div class="field">
+    <%= f.label :ADMINISTRADOR_IdAdministrador %>
+    <%= f.number_field :ADMINISTRADOR_IdAdministrador %>
+  </div> </div> </div>
+<div class="col-md-6">
+    							    <div class="form-group">
+  <div class="field">
+    <%= f.label :HISTORIA_IdHistoria %>
+    <%= f.number_field :HISTORIA_IdHistoria %>
+  </div> </div> </div>
+<div class="col-md-6">
+    							    <div class="form-group">
+  <div class="actions">
+    <%= f.submit %>
+  </div> </div> </div>
 
-<tr>
-    <th>  <div align="right"><%= f.submit %></div> </th>
-</tr>
 <% end %>
     						
     						
     						
-</table></div>
+    						
+						</form>
+				</div>
+			</div>		</div>
+			</div>	
 
+
+
+
+	</section>
+	<!-- /Section: contact -->
+
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<ul class="footer-menu">
+						<li><a href="#">Home</a></li>
+					
+					</ul>
+				</div>
+				<div class="col-md-6 text-right copyright">
+					&copy;Copyright - Grupo PIRATAS
+                    <div class="credits">
+                        <!-- 
+                            All the links in the footer should remain intact. 
+                            You can delete the links only if you purchased the pro version.
+                            Licensing information: https://bootstrapmade.com/license/
+                            Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Bocor
+                        -->
+                        <a>Universidad Peruana de Ciencias Aplicadas</a>
+                    </div>
+				</div>
+			</div>	
+		</div>
+	</footer>
+
+    <!-- Core JavaScript Files -->
+    <script src="/js/jquery.min.js"></script>	 
+    <script src="/js/bootstrap.min.js"></script>
+	<script src="/js/jquery.sticky.js"></script>
+    <script src="/js/jquery.easing.min.js"></script>	
+	<script src="/js/jquery.scrollTo.js"></script>
+	<script src="/js/jquery.appear.js"></script>
+	<script src="/js/stellar.js"></script>
+	<script src="/js/nivo-lightbox.min.js"></script>
+	
+    <script src="/js/custom.js"></script>
+	<script src="/js/css3-animate-it.js"></script>
+    <script src="/contactform/contactform.js"></script>
+    
 </body>
 
 </html>

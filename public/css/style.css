@@ -5,19 +5,12 @@
     Author URL: https://bootstrapmade.com
 */
 /* ==== Google font ==== */
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,300,700,900');
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,700,900);
 @import url('https://fonts.googleapis.com/css?family=Ek+Mukta:400,600,700');
 *{
 	padding:0;
 	margin:0;
 }
-
-body {
-	background-image: url(/img/fondo.jpg);
-	background-repeat: repeat;
-}
-
-
 
 
 body {
@@ -31,8 +24,6 @@ body {
     line-height: 1.6em;
 	font-weight: 400;
 	overflow-x: hidden;
-	background-image: url(/img/fondo.jpg);
-	background-repeat: repeat;
 }
 
 html {
