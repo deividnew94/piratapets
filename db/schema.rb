@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170219223641) do
+ActiveRecord::Schema.define(version: 20170227122526) do
 
   create_table "administradors", primary_key: ["IdAdministrador", "CATALOGO_IdCatalogo", "CAMPANAS_IdCampana"], force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "IdAdministrador",                null: false
@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(version: 20170219223641) do
     t.string  "Codigo_admin",        limit: 45, null: false
     t.integer "CATALOGO_IdCatalogo",            null: false
     t.integer "CAMPANAS_IdCampana",             null: false
+    t.string  "User",                limit: 45, null: false
+    t.string  "Password",            limit: 45, null: false
     t.index ["CAMPANAS_IdCampana"], name: "fk_ADMINISTRADOR_CAMPAÑAS1_idx", using: :btree
     t.index ["CATALOGO_IdCatalogo"], name: "fk_ADMINISTRADOR_CATALOGO1_idx", using: :btree
   end
@@ -156,7 +158,7 @@ ActiveRecord::Schema.define(version: 20170219223641) do
     t.string "Sintomas",                 limit: 45, null: false
   end
 
-  create_table "paciente", primary_key: ["IdPacientes", "CLIENTES_IdCliente", "CLIENTES_ADMINISTRADOR_IdAdministrador", "HISTORIA_IdHistoria"], force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "pacientes", primary_key: ["IdPacientes", "CLIENTES_IdCliente", "CLIENTES_ADMINISTRADOR_IdAdministrador", "HISTORIA_IdHistoria"], force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "IdPacientes",                                                     null: false
     t.string  "Nombre_Duenio",                          limit: 45,               null: false
     t.string  "Especie",                                limit: 45,               null: false
@@ -175,7 +177,7 @@ ActiveRecord::Schema.define(version: 20170219223641) do
     t.index ["HISTORIA_IdHistoria"], name: "fk_PACIENTES_HISTORIA1_idx", using: :btree
   end
 
-  create_table "producto", primary_key: "IdProducto", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "productos", primary_key: "IdProducto", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string  "Nombre_Producto", limit: 45,                null: false
     t.decimal "Precio_Producto",            precision: 10, null: false
   end
@@ -187,12 +189,6 @@ ActiveRecord::Schema.define(version: 20170219223641) do
     t.index ["PROMOCIONES_IdPromociones"], name: "fk_PRODUCTOS_has_PROMOCIONES_PROMOCIONES1_idx", using: :btree
   end
 
-  create_table "promocion", primary_key: "IdPromociones", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string "TipoPromocion",     limit: 45, null: false
-    t.string "NombrePromocion",   limit: 45, null: false
-    t.string "DuracionPromocion", limit: 45, null: false
-  end
-
   create_table "promociones_has_campañas", primary_key: ["PROMOCIONES_IdPromociones", "CAMPAÑAS_IdCampaña"], force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "PROMOCIONES_IdPromociones", null: false
     t.integer "CAMPAÑAS_IdCampaña",        null: false
@@ -200,7 +196,13 @@ ActiveRecord::Schema.define(version: 20170219223641) do
     t.index ["PROMOCIONES_IdPromociones"], name: "fk_PROMOCIONES_has_CAMPAÑAS_PROMOCIONES1_idx", using: :btree
   end
 
-  create_table "servicio", primary_key: ["IdServicio", "CATALOGO_IdCatalogo"], force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "promocions", primary_key: "IdPromociones", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "TipoPromocion",     limit: 45, null: false
+    t.string "NombrePromocion",   limit: 45, null: false
+    t.string "DuracionPromocion", limit: 45, null: false
+  end
+
+  create_table "servicios", primary_key: ["IdServicio", "CATALOGO_IdCatalogo"], force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "IdServicio",                                    null: false
     t.string  "Nombre_Servicio",     limit: 45,                null: false
     t.decimal "Precio_Servicio",                precision: 10, null: false
@@ -216,15 +218,25 @@ ActiveRecord::Schema.define(version: 20170219223641) do
     t.index ["SERVICIOS_IdServicio", "SERVICIOS_CATALOGO_IdCatalogo"], name: "fk_SERVICIOS_has_PROMOCIONES_SERVICIOS1_idx", using: :btree
   end
 
+  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "username",           limit: 45
+    t.string   "email",              limit: 45
+    t.string   "encrypted_password", limit: 45
+    t.string   "salt",               limit: 45
+    t.datetime "timestamps"
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+  end
+
   add_foreign_key "administradors", "campania", column: "CAMPANAS_IdCampana", primary_key: "IdCampania", name: "fk_ADMINISTRADOR_CAMPAÑAS1"
   add_foreign_key "administradors", "catalogos", column: "CATALOGO_IdCatalogo", primary_key: "IdCatalogo", name: "fk_ADMINISTRADOR_CATALOGO1"
   add_foreign_key "busquedas", "clientes", column: "CLIENTES_ADMINISTRADOR_IdAdministrador", primary_key: "ADMINISTRADOR_IdAdministrador", name: "fk_BUSQUEDA_CLIENTES1"
   add_foreign_key "busquedas", "clientes", column: "CLIENTES_IdCliente", primary_key: "IdCliente", name: "fk_BUSQUEDA_CLIENTES1"
-  add_foreign_key "busquedas", "paciente", column: "PACIENTES_CLIENTES_ADMINISTRADOR_IdAdministrador", primary_key: "CLIENTES_ADMINISTRADOR_IdAdministrador", name: "fk_BUSQUEDA_PACIENTES1"
-  add_foreign_key "busquedas", "paciente", column: "PACIENTES_CLIENTES_IdCliente", primary_key: "CLIENTES_IdCliente", name: "fk_BUSQUEDA_PACIENTES1"
-  add_foreign_key "busquedas", "paciente", column: "PACIENTES_IdPacientes", primary_key: "IdPacientes", name: "fk_BUSQUEDA_PACIENTES1"
+  add_foreign_key "busquedas", "pacientes", column: "PACIENTES_CLIENTES_ADMINISTRADOR_IdAdministrador", primary_key: "CLIENTES_ADMINISTRADOR_IdAdministrador", name: "fk_BUSQUEDA_PACIENTES1"
+  add_foreign_key "busquedas", "pacientes", column: "PACIENTES_CLIENTES_IdCliente", primary_key: "CLIENTES_IdCliente", name: "fk_BUSQUEDA_PACIENTES1"
+  add_foreign_key "busquedas", "pacientes", column: "PACIENTES_IdPacientes", primary_key: "IdPacientes", name: "fk_BUSQUEDA_PACIENTES1"
   add_foreign_key "catalogo_has_producto", "catalogos", column: "CATALOGO_IdCatalogo", primary_key: "IdCatalogo", name: "fk_CATALOGO_has_PRODUCTOS_CATALOGO1"
-  add_foreign_key "catalogo_has_producto", "producto", column: "PRODUCTOS_IdProducto", primary_key: "IdProducto", name: "fk_CATALOGO_has_PRODUCTOS_PRODUCTOS1"
+  add_foreign_key "catalogo_has_producto", "productos", column: "PRODUCTOS_IdProducto", primary_key: "IdProducto", name: "fk_CATALOGO_has_PRODUCTOS_PRODUCTOS1"
   add_foreign_key "cita", "clientes", column: "CLIENTES_ADMINISTRADOR_IdAdministrador", primary_key: "ADMINISTRADOR_IdAdministrador", name: "fk_CITAS_CLIENTES1"
   add_foreign_key "cita", "clientes", column: "CLIENTES_IdCliente", primary_key: "IdCliente", name: "fk_CITAS_CLIENTES1"
   add_foreign_key "clientes", "administradors", column: "ADMINISTRADOR_IdAdministrador", primary_key: "IdAdministrador", name: "fk_CLIENTES_ADMINISTRADOR1"
@@ -248,15 +260,15 @@ ActiveRecord::Schema.define(version: 20170219223641) do
   add_foreign_key "guarderia", "busquedas", column: "BUSQUEDA_PACIENTES_CLIENTES_ADMINISTRADOR_IdAdministrador", primary_key: "PACIENTES_CLIENTES_ADMINISTRADOR_IdAdministrador", name: "fk_GUARDERIA_BUSQUEDA1"
   add_foreign_key "guarderia", "busquedas", column: "BUSQUEDA_PACIENTES_CLIENTES_IdCliente", primary_key: "PACIENTES_CLIENTES_IdCliente", name: "fk_GUARDERIA_BUSQUEDA1"
   add_foreign_key "guarderia", "busquedas", column: "BUSQUEDA_PACIENTES_IdPacientes", primary_key: "PACIENTES_IdPacientes", name: "fk_GUARDERIA_BUSQUEDA1"
-  add_foreign_key "paciente", "clientes", column: "CLIENTES_ADMINISTRADOR_IdAdministrador", primary_key: "ADMINISTRADOR_IdAdministrador", name: "fk_PACIENTES_CLIENTES1"
-  add_foreign_key "paciente", "clientes", column: "CLIENTES_IdCliente", primary_key: "IdCliente", name: "fk_PACIENTES_CLIENTES1"
-  add_foreign_key "paciente", "historia", column: "HISTORIA_IdHistoria", primary_key: "IdHistoria", name: "fk_PACIENTES_HISTORIA1"
-  add_foreign_key "productos_has_promociones", "producto", column: "PRODUCTOS_IdProducto", primary_key: "IdProducto", name: "fk_PRODUCTOS_has_PROMOCIONES_PRODUCTOS1"
-  add_foreign_key "productos_has_promociones", "promocion", column: "PROMOCIONES_IdPromociones", primary_key: "IdPromociones", name: "fk_PRODUCTOS_has_PROMOCIONES_PROMOCIONES1"
+  add_foreign_key "pacientes", "clientes", column: "CLIENTES_ADMINISTRADOR_IdAdministrador", primary_key: "ADMINISTRADOR_IdAdministrador", name: "fk_PACIENTES_CLIENTES1"
+  add_foreign_key "pacientes", "clientes", column: "CLIENTES_IdCliente", primary_key: "IdCliente", name: "fk_PACIENTES_CLIENTES1"
+  add_foreign_key "pacientes", "historia", column: "HISTORIA_IdHistoria", primary_key: "IdHistoria", name: "fk_PACIENTES_HISTORIA1"
+  add_foreign_key "productos_has_promociones", "productos", column: "PRODUCTOS_IdProducto", primary_key: "IdProducto", name: "fk_PRODUCTOS_has_PROMOCIONES_PRODUCTOS1"
+  add_foreign_key "productos_has_promociones", "promocions", column: "PROMOCIONES_IdPromociones", primary_key: "IdPromociones", name: "fk_PRODUCTOS_has_PROMOCIONES_PROMOCIONES1"
   add_foreign_key "promociones_has_campañas", "campania", column: "CAMPAÑAS_IdCampaña", primary_key: "IdCampania", name: "fk_PROMOCIONES_has_CAMPAÑAS_CAMPAÑAS1"
-  add_foreign_key "promociones_has_campañas", "promocion", column: "PROMOCIONES_IdPromociones", primary_key: "IdPromociones", name: "fk_PROMOCIONES_has_CAMPAÑAS_PROMOCIONES1"
-  add_foreign_key "servicio", "catalogos", column: "CATALOGO_IdCatalogo", primary_key: "IdCatalogo", name: "fk_SERVICIOS_CATALOGO1"
-  add_foreign_key "servicios_has_promociones", "promocion", column: "PROMOCIONES_IdPromociones", primary_key: "IdPromociones", name: "fk_SERVICIOS_has_PROMOCIONES_PROMOCIONES1"
-  add_foreign_key "servicios_has_promociones", "servicio", column: "SERVICIOS_CATALOGO_IdCatalogo", primary_key: "CATALOGO_IdCatalogo", name: "fk_SERVICIOS_has_PROMOCIONES_SERVICIOS1"
-  add_foreign_key "servicios_has_promociones", "servicio", column: "SERVICIOS_IdServicio", primary_key: "IdServicio", name: "fk_SERVICIOS_has_PROMOCIONES_SERVICIOS1"
+  add_foreign_key "promociones_has_campañas", "promocions", column: "PROMOCIONES_IdPromociones", primary_key: "IdPromociones", name: "fk_PROMOCIONES_has_CAMPAÑAS_PROMOCIONES1"
+  add_foreign_key "servicios", "catalogos", column: "CATALOGO_IdCatalogo", primary_key: "IdCatalogo", name: "fk_SERVICIOS_CATALOGO1"
+  add_foreign_key "servicios_has_promociones", "promocions", column: "PROMOCIONES_IdPromociones", primary_key: "IdPromociones", name: "fk_SERVICIOS_has_PROMOCIONES_PROMOCIONES1"
+  add_foreign_key "servicios_has_promociones", "servicios", column: "SERVICIOS_CATALOGO_IdCatalogo", primary_key: "CATALOGO_IdCatalogo", name: "fk_SERVICIOS_has_PROMOCIONES_SERVICIOS1"
+  add_foreign_key "servicios_has_promociones", "servicios", column: "SERVICIOS_IdServicio", primary_key: "IdServicio", name: "fk_SERVICIOS_has_PROMOCIONES_SERVICIOS1"
 end

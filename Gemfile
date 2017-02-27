@@ -52,3 +52,5 @@ gem 'mysql2'
 
 
 gem 'bootstrap', '~> 4.0.0.alpha3'
+gem 'wdm', '>= 0.1.0'
+gem 'bcrypt-ruby', :require => 'bcrypt'
