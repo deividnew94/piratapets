@@ -1,4 +1,6 @@
-<%= form_for(doctor) do |f| %>
+		<div align="center">
+		<table class="table table-bordered">
+		  <%= form_for(doctor) do |f| %>
   <% if doctor.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(doctor.errors.count, "error") %> prohibited this doctor from being saved:</h2>
@@ -11,42 +13,44 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :IdDoctor %>
-    <%= f.number_field :IdDoctor %>
-  </div>
+  <tr>
+   <td> <%= f.label :IdDoctor %></td>
+    <td>  <%= f.number_field :IdDoctor %></td>
+  </tr>
 
-  <div class="field">
-    <%= f.label :Nombre %>
-    <%= f.text_field :Nombre %>
-  </div>
+  <tr>
+    <td>  <%= f.label :Nombre %></td>
+    <td>  <%= f.text_field :Nombre %></td>
+  </tr>
 
-  <div class="field">
-    <%= f.label :Apellido_Paterno %>
-    <%= f.text_field :Apellido_Paterno %>
-  </div>
+  <tr>
+   <td>   <%= f.label :Apellido_Paterno %></td>
+    <td>  <%= f.text_field :Apellido_Paterno %></td>
+  </tr>
 
-  <div class="field">
-    <%= f.label :Apellido_Materno %>
-    <%= f.text_field :Apellido_Materno %>
-  </div>
+  <tr>
+    <td>  <%= f.label :Apellido_Materno %></td>
+    <td>  <%= f.text_field :Apellido_Materno %></td>
+  </tr>
 
-  <div class="field">
-    <%= f.label :Email %>
-    <%= f.text_field :Email %>
-  </div>
+  <tr>
+    <td>  <%= f.label :Email %></td>
+    <td>  <%= f.text_field :Email %></td>
+  </tr>
 
-  <div class="field">
-    <%= f.label :Telefono %>
-    <%= f.text_field :Telefono %>
-  </div>
+  <tr>
+   <td>   <%= f.label :Telefono %></td>
+   <td>   <%= f.text_field :Telefono %></td>
+  </tr>
 
-  <div class="field">
-    <%= f.label :ADMINISTRADOR_IdAdministrador %>
-    <%= f.number_field :ADMINISTRADOR_IdAdministrador %>
-  </div>
+  <tr>
+   <td>   <%= f.label :ADMINISTRADOR_IdAdministrador %></td>
+   <td>   <%= f.number_field :ADMINISTRADOR_IdAdministrador %></td>
+  </tr>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <tr>
+   <td>   <%= f.submit %></td>
+  </tr>
 <% end %>
+
+</table></div>

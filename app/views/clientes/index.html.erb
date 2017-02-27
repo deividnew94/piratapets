@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Clientes</h1>
-
+</br></br>
+<div align="center"><h1>CLIENTES</h1></div>
+<div align="center">
 <table class="table table-bordered">
   <thead>
     <tr>
@@ -32,14 +32,14 @@
         <td><%= cliente.Telefono_Celular %></td>
         <td><%= cliente.ADMINISTRADOR_IdAdministrador %></td>
         <td><%= cliente.HISTORIA_IdHistoria %></td>
-        <td><%= link_to 'Show', cliente %></td>
-        <td><%= link_to 'Edit', edit_cliente_path(cliente) %></td>
-        <td><%= link_to 'Destroy', cliente, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'VER', cliente %></td>
+        <td><%= link_to 'EDITAR', edit_cliente_path(cliente) %></td>
+        <td><%= link_to 'BORRAR', cliente, method: :delete, data: { confirm: 'ESTAS SEGURO?' } %></td>
       </tr>
     <% end %>
   </tbody>
-</table>
+</table></div>
 
-<br>
+</br></br>
 
-<%= link_to 'New Cliente', new_cliente_path %>
+<div align="center"><%= link_to 'NUEVO CLIENTE', new_cliente_path %></div></br></br>

@@ -1,4 +1,7 @@
-<%= form_for(comprobante) do |f| %>
+		<div align="center">
+		<table class="table table-bordered">
+		  
+		  <%= form_for(comprobante) do |f| %>
   <% if comprobante.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(comprobante.errors.count, "error") %> prohibited this comprobante from being saved:</h2>
@@ -11,57 +14,61 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :IdComprobante %>
-    <%= f.number_field :IdComprobante %>
-  </div>
+<tr>
+    <th><div align="right">  <%= f.label :IdComprobante %></div></th>
+     <th><div align="left">  <%= f.text_field :IdComprobante %></div></th>
+</tr>
 
-  <div class="field">
-    <%= f.label :Nombre_Duenio %>
-    <%= f.text_field :Nombre_Duenio %>
-  </div>
+<tr>
+  <th><div align="right">    <%= f.label :Nombre_Duenio %></div></th>
+   <th><div align="left">  <%= f.text_field :Nombre_Duenio %></div></th>
+</tr>
 
-  <div class="field">
-    <%= f.label :Paciente %>
-    <%= f.text_field :Paciente %>
-  </div>
+<tr>
+    <th><div align="right">  <%= f.label :Paciente %></div></th>
+    <th><div align="left"> <%= f.text_field :Paciente %></div></th>
+</tr>
 
-  <div class="field">
-    <%= f.label :Ruc %>
-    <%= f.text_field :Ruc %>
-  </div>
+<tr>
+   <th><div align="right">   <%= f.label :Ruc %></div></th>
+    <th><div align="left"> <%= f.text_field :Ruc %></div></th>
+</tr>
 
-  <div class="field">
-    <%= f.label :Direccion %>
-    <%= f.text_field :Direccion %>
-  </div>
+<tr>
+    <th><div align="right">  <%= f.label :Direccion %></div></th>
+    <th><div align="left"> <%= f.text_field :Direccion %></div></th>
+</tr>
 
-  <div class="field">
-    <%= f.label :Fecha_Registro %>
-    <%= f.date_select :Fecha_Registro %>
-  </div>
+<tr>
+     <th><div align="right"> <%= f.label :Fecha_Registro %></div></th>
+     <th><div align="left"><%= f.date_select :Fecha_Registro %></div></th>
+</tr>
 
-  <div class="field">
-    <%= f.label :Detalle_Producto %>
-    <%= f.text_field :Detalle_Producto %>
-  </div>
+<tr>
+    <th><div align="right">  <%= f.label :Detalle_Producto %></div></th>
+    <th> <div align="left"><%= f.text_field :Detalle_Producto %></div></th>
+</tr>
 
-  <div class="field">
-    <%= f.label :Precio_Unitario %>
-    <%= f.text_field :Precio_Unitario %>
-  </div>
+<tr>
+    <th><div align="right">  <%= f.label :Precio_Unitario %></div></th>
+     <th><div align="left"> <%= f.text_field :Precio_Unitario %></div></th>
+</tr>
 
-  <div class="field">
-    <%= f.label :Precio_Total %>
-    <%= f.text_field :Precio_Total %>
-  </div>
+<tr>
+   <th><div align="right">   <%= f.label :Precio_Total %></div></th>
+   <th>  <div align="left"><%= f.text_field :Precio_Total %></div></th>
+</tr>
 
-  <div class="field">
-    <%= f.label :Cantidad %>
-    <%= f.text_field :Cantidad %>
-  </div>
+<tr>
+    <th><div align="right">  <%= f.label :Cantidad %></div></th>
+     <th><div align="left"><%= f.text_field :Cantidad %></div></th>
+</tr>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<tr>
+  <th><div align="right"> <%= f.submit %></div></th>
+  <th><div align="left">  </div></th>
+</tr>
+
 <% end %>
+</table></div>
+

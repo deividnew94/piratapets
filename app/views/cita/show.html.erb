@@ -1,49 +1,57 @@
+<div align="center" class="table-responsive">
+<table align="center"  class="table-hover">
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Idcita:</strong>
-  <%= @citum.IdCita %>
-</p>
+<tr>
+<td><strong>ID CITA:</strong></td>
+<td>  <%= @citum.IdCita %></td>
 
-<p>
-  <strong>Paciente:</strong>
-  <%= @citum.Paciente %>
-</p>
+</tr>
+<tr>
+ <td> <strong>PACIENTE:</strong></td>
+ <td> <%= @citum.Paciente %></td>
+</tr>
 
-<p>
-  <strong>Duenio:</strong>
-  <%= @citum.Duenio %>
-</p>
+<tr>
+<td>  <strong>Duenio:</strong></td>
+<td>  <%= @citum.Duenio %></td>
+</tr>
 
-<p>
-  <strong>Telefono:</strong>
-  <%= @citum.Telefono %>
-</p>
+<tr>
+<td>  <strong>TELÉFONO:</strong></td>
+<td>  <%= @citum.Telefono %></td>
+</tr>
 
-<p>
-  <strong>Direccion:</strong>
-  <%= @citum.Direccion %>
-</p>
+<tr>
+  <td><strong>DIRECCION:</strong></td>
+  <td><%= @citum.Direccion %></td>
+</tr>
 
-<p>
-  <strong>Fecha registro:</strong>
-  <%= @citum.Fecha_Registro %>
-</p>
+<tr>
+ <td> <strong>FECHA DE REGISTRO:</strong></td>
+ <td> <%= @citum.Fecha_Registro %></td>
+</tr>
 
-<p>
-  <strong>Vacunas:</strong>
-  <%= @citum.Vacunas %>
-</p>
+<tr>
+ <td> <strong>VACUNAS:</strong></td>
+ <td> <%= @citum.Vacunas %></td>
+</tr>
 
-<p>
-  <strong>Clientes idcliente:</strong>
-  <%= @citum.CLIENTES_IdCliente %>
-</p>
+<tr>
+ <td> <strong>Clientes ID:</strong></td>
+<td>  <%= @citum.CLIENTES_IdCliente %></td>
+</tr>
 
-<p>
-  <strong>Clientes administrador idadministrador:</strong>
-  <%= @citum.CLIENTES_ADMINISTRADOR_IdAdministrador %>
-</p>
+<tr>
+  <td><strong>Clientes administrador idadministrador:</strong></td>
+ <td> <%= @citum.CLIENTES_ADMINISTRADOR_IdAdministrador %></td>
+</tr>
 
-<%= link_to 'Edit', edit_citum_path(@citum) %> |
-<%= link_to 'Back', cita_path %>
+
+
+</table></div></br>
+<%= link_to 'EDITAR', edit_citum_path(@citum) %> |
+<%= link_to 'ATRAS', cita_path %>
+
+</br></br>
+

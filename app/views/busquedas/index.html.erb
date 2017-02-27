@@ -1,16 +1,16 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Busquedas</h1>
+<h1>REALIZAR UNA BUSQUEDA</h1>
 
-<table>
+<table class="table table-bordered">
   <thead>
     <tr>
-      <th>Idbusqueda</th>
-      <th>Dni</th>
-      <th>Codigo paciente</th>
-      <th>Pacientes idpacientes</th>
-      <th>Pacientes clientes idcliente</th>
-      <th>Pacientes clientes administrador idadministrador</th>
+      <th>ID</th>
+      <th>DNI</th>
+      <th>CODIGO PACIENTE</th>
+      <th>ID PACIENTE</th>
+      <th>ID CLIENTE</th>
+      <th>ID ADMINISTRADOR</th>
       <th>Clientes idcliente</th>
       <th>Clientes administrador idadministrador</th>
       <th colspan="3"></th>
@@ -28,9 +28,9 @@
         <td><%= busqueda.PACIENTES_CLIENTES_ADMINISTRADOR_IdAdministrador %></td>
         <td><%= busqueda.CLIENTES_IdCliente %></td>
         <td><%= busqueda.CLIENTES_ADMINISTRADOR_IdAdministrador %></td>
-        <td><%= link_to 'Show', busqueda %></td>
-        <td><%= link_to 'Edit', edit_busqueda_path(busqueda) %></td>
-        <td><%= link_to 'Destroy', busqueda, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'VER', busqueda %></td>
+        <td><%= link_to 'EDITAR', edit_busqueda_path(busqueda) %></td>
+        <td><%= link_to 'BORRAR', busqueda, method: :delete, data: { confirm: 'Esta seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -38,4 +38,4 @@
 
 <br>
 
-<%= link_to 'New Busqueda', new_busqueda_path %>
+<%= link_to 'NUEVA BUSQUEDA', new_busqueda_path %>
