@@ -1,19 +1,24 @@
+</br></br></br><div align="center" class="table-responsive"><table class="table-hover">
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Idcatalogo:</strong>
-  <%= @catalogo.IdCatalogo %>
-</p>
+<tr>
+  <td><strong>ID CATALOGO:</strong></td>
+  <td><%= @catalogo.IdCatalogo %></td>
+</tr>
 
-<p>
-  <strong>Productos:</strong>
-  <%= @catalogo.Productos %>
-</p>
+<tr>
+ <td> <strong>PRODUCTOS:</strong></td>
+ <td> <%= @catalogo.Productos %></td>
+</tr>
 
-<p>
-  <strong>Servicios:</strong>
-  <%= @catalogo.Servicios %>
-</p>
+<tr>
+ <td> <strong>SERVICIOS:</strong></td>
+ <td> <%= @catalogo.Servicios %></td>
+</tr>
 
-<%= link_to 'Edit', edit_catalogo_path(@catalogo) %> |
-<%= link_to 'Back', catalogos_path %>
+</table>
+</div>
+</br></br></br></br></br>
+<div align="center"><%= link_to ' EDITAR ', edit_catalogo_path(@catalogo) %> |
+<%= link_to ' ATRAS ', catalogos_path %></div></br></br></br></br>

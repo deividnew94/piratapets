@@ -1,5 +1,9 @@
+<div align="center" class="table-responsive"><table align="center"  class="table-hover">
+
 <%= form_for(campanium) do |f| %>
   <% if campanium.errors.any? %>
+  
+  
     <div id="error_explanation">
       <h2><%= pluralize(campanium.errors.count, "error") %> prohibited this campanium from being saved:</h2>
 
@@ -10,23 +14,31 @@
       </ul>
     </div>
   <% end %>
+  
+  
+  
 
-  <div class="field">
-    <%= f.label :IdCampania %>
-    <%= f.number_field :IdCampania %>
-  </div>
+  <tr>
+  <td> <%= f.label :IdCampania %></td> 
+    <td><%= f.number_field :IdCampania %></td> 
+</tr>
 
-  <div class="field">
-    <%= f.label :Nombre_Campania %>
-    <%= f.text_field :Nombre_Campania %>
-  </div>
+  <tr>
+   <td> <%= f.label :Nombre_Campania %></td> 
+    <td><%= f.text_field :Nombre_Campania %></td> 
+</tr>
 
-  <div class="field">
-    <%= f.label :Tiempo_Campania %>
-    <%= f.datetime_select :Tiempo_Campania %>
-  </div>
+  <tr>
+   <td> <%= f.label :Tiempo_Campania %></td> 
+   <td> <%= f.datetime_select :Tiempo_Campania %></td> 
+</tr>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+  <tr>
+  <td>  </br></td>
+</tr>
+</tr>
+
+  <tr>
+  <td>  <%= f.submit %></td>
+</tr>
+<% end %></table></div>

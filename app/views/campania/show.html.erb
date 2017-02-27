@@ -1,19 +1,25 @@
+</br></br><div align="center" class="table-responsive"><table align="center"  class="table-hover">
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Idcampania:</strong>
-  <%= @campanium.IdCampania %>
-</p>
+<tr>
+ <td> <strong>ID CAMPAÑA:</strong></td>
+<td>  <%= @campanium.IdCampania %></td>
+</tr>
 
-<p>
-  <strong>Nombre campania:</strong>
-  <%= @campanium.Nombre_Campania %>
-</p>
+<tr>
+<td>  <strong>NOMBRE DE LA CAMPAÑA:</strong></td>
+  <td><%= @campanium.Nombre_Campania %></td>
+</tr>
 
-<p>
-  <strong>Tiempo campania:</strong>
-  <%= @campanium.Tiempo_Campania %>
-</p>
+<tr>
+ <td> <strong>INICIO CAMPAÑA:</strong></td>
+ <td> <%= @campanium.Tiempo_Campania %></td>
+</tr>
 
-<%= link_to 'Edit', edit_campanium_path(@campanium) %> |
-<%= link_to 'Back', campania_path %>
+</table>
+</div></br></br></br></br>
+<div align="center">
+
+<%= link_to 'EDITAR', edit_campanium_path(@campanium) %> |
+<%= link_to 'ATRAS', campania_path %>
+</div></br></br></br></br>

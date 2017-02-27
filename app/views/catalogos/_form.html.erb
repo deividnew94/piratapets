@@ -1,3 +1,6 @@
+</br></br><div align="center" class="table-responsive"><table align="center"  class="table-hover">
+
+
 <%= form_for(catalogo) do |f| %>
   <% if catalogo.errors.any? %>
     <div id="error_explanation">
@@ -11,22 +14,24 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :IdCatalogo %>
-    <%= f.number_field :IdCatalogo %>
-  </div>
+<tr>
+   <td> <%= f.label :IdCatalogo %></td>
+     <td>  <%= f.number_field :IdCatalogo %></td>
+</tr>
 
-  <div class="field">
-    <%= f.label :Productos %>
-    <%= f.text_field :Productos %>
-  </div>
+<tr>
+     <td>  <%= f.label :Productos %></td>
+      <td> <%= f.text_field :Productos %></td>
+</tr>
 
-  <div class="field">
-    <%= f.label :Servicios %>
-    <%= f.text_field :Servicios %>
-  </div>
+<tr>
+     <td>  <%= f.label :Servicios %></td>
+      <td> <%= f.text_field :Servicios %></td>
+</tr>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<tr> 
+     <td>  </br><%= f.submit %></td>
+</tr>
 <% end %>
+</table>
+</div>
